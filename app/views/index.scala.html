@@ -1,0 +1,12 @@
+@(user: Form[users.UserInformation])(implicit request:RequestHeader)
+@import helper._
+@main("Dont't try to play with Play") {
+
+<form action= "@routes.HomeController.storeData()" method="POST">
+    @CSRF.formField
+    <input type="text" name="fname"/><br>
+    <input type="text" name="lname"/><br>
+    <input type="text" name="email"/><br>
+    <input type="submit" value="Submit"/>
+</form>
+}
