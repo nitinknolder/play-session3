@@ -4,12 +4,16 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+#GET     /                           controllers.HomeController.index
 
-POST  /store                controllers.HomeController.storeData
+#POST  /store                controllers.HomeController.storeData
 
-GET     /store                controllers.HomeController.getData(email)
+#GET     /store                controllers.HomeController.getData(email)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 GET     /assets/*file               controllers.Assets.versioned(path= "/public",file: Asset)
+
+GET /                   controllers.UserController.index
+POST /add                controllers.UserController.addUser
+GET   /userProfile     controllers.UserController.userProfile()
